@@ -25,15 +25,21 @@ img {
 }
 
 section {
+  margin-top: 10rem;
+  max-width: 1000px;
+  background-color: #f1efe9;
   padding: 1.5rem 1.1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1.5fr;
-  grid-template-rows: 20% 1fr 25%;
+  grid-template-rows: repeat(2, auto) 100px;
   grid-template-areas:
     "hedin hedin"
     "dog para "
     "turtle tiger";
+  position: relative;
 }
 
 .hedin-1 {
@@ -58,6 +64,12 @@ section {
   font-family: "Montserrat", sans-serif;
 }
 
-section::before {
-  content: wow;
+section:before {
+  content: "wow";
+  z-index: -99;
+  font-weight: bold;
+  position: absolute;
+  font-size: 10rem;
+  top: -8rem;
+  left: -3rem;
 }
